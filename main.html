@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Photo Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: repeating-linear-gradient(
+        45deg,
+        #222 0px,
+        #222 10px,
+        #2a2a2a 10px,
+        #2a2a2a 20px
+      ); /* striped background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
+    #photo-container {
+      background: #3a3a3a;
+      border-radius: 16px;
+      padding: 20px 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+      max-width: 1000px;
+    }
+
+    #photo-heading {
+      font-size: 2rem;
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    #animal-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    #animal-photos img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+
+    #animal-photos img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #animal-photos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      #animal-photos {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <div id="photo-container">
+    <h1 id="photo-heading">ANIMAL PHOTOS</h1>
+    <div id="animal-photos">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/camel.jpg" alt="Camel in desert">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/cheetah.jpg" alt="Cheetah resting">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/elephant.jpg" alt="Elephants together">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/gorilla.jpg" alt="Gorilla in forest">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/koala.jpg" alt="Koalas hugging">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/lion.jpg" alt="Lion roaring">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/polar_bear.jpg" alt="Polar bear swimming">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/tiger.jpg" alt="Tiger with cub">
+      <img src="https://www2.d125.org/applied_arts/teched/courses/WEB/portfolios/2014_FallP8/Rami_Portfolio_Period8/unit4_css/project_1folder/cssProject1/wolf.jpg" alt="Wolf with pups">
+    </div>
+  </div>
 
 </body>
-
 </html>
